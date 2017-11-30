@@ -1,0 +1,78 @@
+@CHARSET "UTF-8";
+
+#header {
+	position: absolute;
+	right: 40px;
+	top: 20px
+}
+
+#header>.title {
+	text-size: 20px;
+	color: red
+}
+
+#body {
+	padding: 10px 10px;
+	position: relative;
+	top: 30px;
+}
+.btn{
+	width: 156px;
+	height: 30px;
+	box-sizing: border-box;
+}
+#footer {
+	position: absolute;
+	right: 40px;
+	bottom: 20px
+}
+
+.verification {
+	width: 35px;
+	height: 35px;
+}
+
+.title {
+	padding: 10px 10px;
+	color: #000fff
+}
+
+.myFrame {
+	width: 200px;
+	height: 500px;
+	text-align: center;
+	margin: 100px auto;
+}
+
+.message {
+	margin-bottom: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #0dff03;
+}
+
+.data {
+	padding: 10px 10px;
+}
+
+.ErrorData {
+	color: red;
+	padding-left: 10px;
+}
+
+input {
+	padding: 5px 5px;
+	font-size: 12px;
+}
+
+.copyright {
+	text-align: right;
+}
+
+.author {
+	text-align: right;
+}
+
+.date {
+	text-align: center;
+}
