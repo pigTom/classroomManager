@@ -1,0 +1,12 @@
+ create sequence clouduser_seq
+ start with 1
+ increment by 1
+ nomaxvalue
+ nocycle
+ 
+ create sequence cloudfile_seq
+ start with 1
+ increment by 1
+ nomaxvalue
+ nocycle
+ 

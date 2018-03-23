@@ -1,0 +1,91 @@
+@CHARSET "UTF-8";
+.fileName{
+	display: inline-block;
+	width: 250px;
+	height: 24px;	
+	padding: 3px 8px;
+	box
+}
+.fileSize{
+	display: inline-block;
+	width: 150px;
+	height: 24px;
+	padding: 3px 8px;
+	box-sizing: border-box;
+}.fileDate{
+	display: inline-block;
+	text-align: center;
+	width: 200px;
+	height: 24px;
+	padding: 3px 8px;
+	box-sizing: border-box;
+}.fileDownload{
+	display: inline-block;
+	width: 50px;
+	height: 24px;
+	padding: 3px 8px;
+	box-sizing: border-box;
+}.fileDelete{
+	display: inline-block;
+	width: 50px;
+	
+	padding: 3px 8px;
+	box-sizing: border-box;
+}
+.table{
+	width: 800px;
+	height: 400px;
+	text-align: center;
+	margin: auto auto;
+	position: relative;
+	box-sizing: border-box;
+	background-color: #F2FAF0;
+}
+.TiName{
+	font-size: 24px;
+	color: #0f0ff8;
+	box-sizing: border-box;
+}
+.page{
+	
+	padding: 10px 10px;	
+	text-align: center;
+	height:40px;
+	box-sizing: border-box;
+}
+#pageBar{
+	width: 800px;
+	position: absolute;
+	height:40px;
+	bottom: 10px;
+}
+.tableHeader{
+	margin: 0px 5px;
+	padding: 5px 10px;
+	height:40px;
+	text-align: center;
+	border: 1px solid green;
+	background-color: #F3FAFa;
+	box-sizing: border-box;	
+}
+.rowData{
+	padding: 5px 10px;
+	height:40px;
+	text-align: center;
+	border: 1px solid green;
+	margin:  0px 5px;
+	background-color:#F3FAFa;
+	box-sizing: border-box;
+}
+.rowData1{
+	padding: 5px 10px;
+	height:40px;
+	text-align: center;
+	border: 1px solid green;
+	margin:  0px 5px;
+	background-color:#a0fbaf;
+	box-sizing: border-box;
+}
+input{
+	margin: 0px 5px;
+}

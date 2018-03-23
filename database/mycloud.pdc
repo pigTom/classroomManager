@@ -1,0 +1,20 @@
+create user mycloud identified by mycloud 
+
+-- create table user
+create table clouduser(
+       userid number primary key,
+       username varchar2(30) not null,
+       userpassword varchar2(30) not null,
+       -- 0 means is not vip, 1 means vip
+       isvip char default '0' check( isvip in ( '0', '1') ) not null
+)
+
+-- create table file
+create table cloudfile(
+       fileid number primary key,
+       userid number references clouduser(userid),
+       filename varchar2(50) not null,
+       filepath varchar2(50) not null,
+       filesize number not null,
+       altertime date not null
+   )
