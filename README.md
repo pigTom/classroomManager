@@ -6,3 +6,4 @@
 ②搜索模块：暂时还没有实现（可以将用户设置为共享的文件供其他人搜索和下载）
 
 注意:本项目是用MyEclipse实现，并且没有采用maven或者gradle管理jar包。
+# classroomManager 教室管理系系统
