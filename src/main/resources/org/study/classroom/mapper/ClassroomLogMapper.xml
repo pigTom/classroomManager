@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.study.classroom.mapper.ClassroomLogMapper">
+
+    <resultMap id="logMap" type="org.study.classroom.model.ClassroomLog">
+        <id column="id" property="id"/>
+        <result column="classroom_id" property="classroomId"/>
+        <result column="classroom_name" property="classroomName"/>
+        <result column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="log_date" property="logDate"/>
+        <result column="log_time" property="logTime"/>
+        <result column="log_name" property="logName"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+    <sql id="logSql">
+        SELECT id , log.classroom_id classroom_id, (SELECT classroom_name FROM classroom c WHERE
+        c.id = log.classroom_id) as classroom_name, log.user_id user_id, (SELECT user_name FROM classroom_user u
+        WHERE u.id = log.user_id) as user_name, log.log_name as log_name, log.log_date as log_date,
+        log.log_time as log_time, log.create_time as create_time FROM classroom_log log
+
+    </sql>
+
+    <select id="selectAllLogs" resultMap="logMap">
+        <include refid="logSql"/>
+    </select>
+
+    <select id="findLogsByClassroomId" parameterType="java.lang.Long" resultMap="logMap">
+        <include refid="logSql"/> where log.classroom_id = #{id}
+    </select>
+
+    <delete id="deleteLogById">
+        DELETE FROM classroom_log WHERE id = #{id}
+    </delete>
+
+    <delete id="deleteAllLogsById" parameterType="java.lang.Long">
+        DELETE FROM classroom_log WHERE id in( #{param})
+    </delete>
+</mapper>

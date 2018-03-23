@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+.form{
+	display: inline-block;
+}
+#page{
+	font-size: 20px;
+	color: green;
+	padding: 0px 10px;
+	background-color: #0ffa80;
+}
+
+.row {
+	float: left;
+	width: 200px;
+	padding: 10px;
+	text-align: center;
+	font-size: 20px;
+	background-color: #F2FAFF;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid blue;
+}
+
+input {
+	font-size: 20px;
+	padding: 3px;
+}
+
+#button {
+	padding: 10px 160px;
+}
+#spaUser{
+	color: #7f7;
+}
+
+
+
+.warnning{
+	color: red;
+	font-size: 20px;
+	padding-left: 20px;
+}

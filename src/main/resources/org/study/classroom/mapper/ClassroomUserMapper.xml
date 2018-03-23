@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.study.classroom.mapper.ClassroomUserMapper">
+
+    <resultMap id="classUserMap" type="org.study.classroom.model.ClassroomUser">
+        <id javaType="Long" column="id" property="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="userTitle" column="user_title"/>
+        <result property="userName" column="user_name"/>
+        <result property="password" column="password"/>
+        <result property="privilege" column="privilege"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="classUserMap">
+        SELECT * FROM classroom_user
+    </select>
+    <select id="selectByTitle" resultMap="classUserMap">
+        SELECT * FROM classroom_user WHERE user_title=#{userTilte}
+    </select>
+    <select id="selectById" resultMap="classUserMap">
+        SELECT * FROM  `classroom_user` WHERE id=#{id}
+    </select>
+    <select id="selectByNameLike" resultMap="classUserMap">
+        SELECT * FROM classroom_user WHERE user_name like #{param}
+    </select>
+    <select id="selectByName" resultMap="classUserMap">
+        SELECT * FROM  classroom_user where user_name=#{userName}
+    </select>
+
+    <insert id="insert" parameterType="org.study.classroom.model.ClassroomUser"
+    useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO classroom_user(user_id, user_name,
+        password, privilege)
+        VALUES (
+        #{userId},  #{userName}, #{password}, #{privilege}
+        )
+    </insert>
+
+    <update id="update" parameterType="org.study.classroom.model.ClassroomUser">
+        UPDATE classroom_user SET id = #{id}
+        <if test="password != null">
+            , password = #{password}
+        </if>
+        <if test="userName != null">
+            , user_name = #{userName}
+        </if>
+        <if test="privilege != null">
+            , privilege = #{privilege}
+        </if>
+        where id = #{id}
+    </update>
+
+    <update id="updateAllPrivilege">
+        UPDATE classroom_user SET privilege = #{param1} WHERE id IN (#{param2})
+    </update>
+
+    <delete id="deleteByName" parameterType="java.lang.String">
+        DELETE FROM classroom_user where user_name = #{userName}
+    </delete>
+
+    <delete id="deleteById">
+        DELETE from `classroom_user` where id = #{id}
+    </delete>
+
+    <delete id="deleteAllById" parameterType="java.lang.String">
+        DELETE FROM classroom_user WHERE id IN (#{param})
+    </delete>
+
+</mapper>

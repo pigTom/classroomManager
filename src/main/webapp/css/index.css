@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+	#main {
+		width: 550px;
+		margin: 50px 100px;
+		font-size: 18px;
+	}
+	div{
+		margin: 15px;
+	}
+	*{
+		font-size: 16px;
+	}
+	.warnning{
+		color: red;
+		padding: 0px;
+		font-size: 16px;
+	}
+	.start{
+		padding: 4px;
+	
+	}
+	#lgLabel{
+		padding-left: 40px;
+		font-size: 25px;
+		color: #3366ff;
+	}
+	.button{
+		  width: 210px; !important;
+	}
+	input{
+		padding: 5px 6px;
+	}
+	.verification{
+		width: 35px;
+		height: 35px;
+	}
+	img{
+		vertical-align: middle;
+	}

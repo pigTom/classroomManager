@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.study.classroom.mapper.ClassroomMapper">
+
+
+    <resultMap id="classMap" type="org.study.classroom.model.Classroom">
+        <id column="id" property="id"/>
+        <result column="classroom_name" property="classroomName"/>
+        <result column="building_name" property="buildingName"/>
+        <result column="classroom_seats" property="classroomSeats"/>
+        <result column="available" property="available"/>
+        <!--<collection property="logs" resultMap="classroomLog"/>-->
+    </resultMap>
+    <sql id="classSql">
+        SELECT id , classroom_name, building_name, classroom_seats, available
+        FROM classroom
+    </sql>
+
+    <select id="selectAllClassrooms" resultMap="classMap">
+        <include refid="classSql"/>
+    </select>
+
+
+    <select id="selectClassroomsByLike" resultMap="classMap"
+            parameterType="java.util.HashMap">
+         <include refid="classSql"/> where id = id
+        <if test="buildingName != null">
+            and building_name LIKE #{buildingName}
+        </if>
+        <if test="classroomName != null">
+            and classroom_name LIKE #{classroomName}
+        </if>
+    </select>
+
+    <update id="updateAllAvailable">
+        UPDATE classroom SET available = #{param1} where id in (#{param2})
+    </update>
+
+    <delete id="deleteClassroomById">
+        DELETE FROM classroom WHERE id = #{id}
+    </delete>
+
+    <delete id="deleteAllClassroomsById">
+        DELETE from classroom where id in (#{id})
+    </delete>
+
+</mapper>

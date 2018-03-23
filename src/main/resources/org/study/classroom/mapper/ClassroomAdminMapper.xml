@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.study.classroom.mapper.ClassroomAdminMapper">
+    <resultMap id="adminMap" type="org.study.classroom.model.ClassroomAdministrator">
+        <id column="id" property="id"/>
+        <result property="adminName" column="admin_name"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <select id="selectById" resultMap="adminMap">
+        SELECT * FROM classroom_administrator WHERE id=#{id}
+    </select>
+</mapper>
