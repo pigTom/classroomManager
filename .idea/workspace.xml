@@ -2,129 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22c5ad67-e7db-43fc-b381-27d129ea6c69" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/cloudfile_fileid_trig.trg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/clouduser_userid_trig.trg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/mycloud.pdc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/sequences.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.externalToolBuilders/org.eclipse.wst.jsdt.core.javascriptValidator.launch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.externalToolBuilders/org.eclipse.wst.validation.validationbuilder.launch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.myeclipse/profiler/Servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.settings/.jsdtscope" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.settings/com.genuitec.runtime.libraries.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.settings/org.eclipse.core.resources.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.settings/org.eclipse.ltk.core.refactoring.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.settings/org.eclipse.wst.common.component" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/DispatcherServlet-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/applicationContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.externalToolBuilders/org.eclipse.wst.jsdt.core.javascriptValidator.launch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.externalToolBuilders/org.eclipse.wst.validation.validationbuilder.launch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.myeclipse/profiler/Servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.settings/.jsdtscope" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.settings/com.genuitec.runtime.libraries.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.settings/org.eclipse.core.resources.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.settings/org.eclipse.ltk.core.refactoring.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.settings/org.eclipse.wst.common.component" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.settings/org.eclipse.wst.common.project.facet.core.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.settings/org.eclipse.wst.jsdt.ui.superType.container" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/.settings/org.eclipse.wst.jsdt.ui.superType.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/applicationContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/c3p0-config.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/aop/DaoAop.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/bean/AbstractPageInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/bean/CloudFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/bean/CloudUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/bean/PageInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/controller/FileController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/controller/UserController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/dao/FileDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/dao/UserDao.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/service/FileService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/service/UserService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/AbstractDBUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/BeanConverter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/BeanUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/Converter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/DBUtils$Factory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/DBUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/DateConverter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/DefaultCharacterFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/MyDB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/MyTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/SimpleConverter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/SimpleTransaction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/SpringLoaderListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/utils/Transaction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/webUtils/LoginDispatcherFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/com/tang/myCloud/webUtils/SessionFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/classes/jdbc.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/jsp/myCloud.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/lib/commons-fileupload-1.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/lib/commons-io-1.3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/lib/commons-logging-1.0.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/css/cloud.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/css/common.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/js/common.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/js/jquery-2.1.4.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/banklogo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/banklogo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/pic/logo1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/register.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/WebRoot/search.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/applicationContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/c3p0-config.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/aop/DaoAop.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/bean/AbstractPageInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/bean/CloudFile.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/bean/CloudUser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/bean/PageInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/controller/FileController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/controller/UserController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/dao/FileDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/dao/UserDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/service/FileService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/service/UserService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/AbstractDBUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/BeanConverter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/BeanUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/Converter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/DBUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/DateConverter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/DefaultCharacterFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/MyDB.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/MyTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/SimpleConverter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/SimpleTransaction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/SpringLoaderListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/utils/Transaction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/webUtils/LoginDispatcherFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/com/tang/myCloud/webUtils/SessionFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/myCloud/src/jdbc.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/preview/myCloud01.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -347,7 +225,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="214" />
     <option name="width" value="1686" />
     <option name="height" value="1047" />
@@ -510,7 +388,7 @@
       <workItem from="1521686284259" duration="1470000" />
       <workItem from="1521789087762" duration="2038000" />
       <workItem from="1521806019615" duration="3048000" />
-      <workItem from="1521813173125" duration="157000" />
+      <workItem from="1521813173125" duration="460000" />
     </task>
     <task id="LOCAL-00001" summary="This is a test git and this project is half way, next I will continue to finish it.&#10;version 0.0.1">
       <created>1521807566049</created>
@@ -519,14 +397,21 @@
       <option name="project" value="LOCAL" />
       <updated>1521807566049</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="This is a test git and this project is half way, next I will continue to finish it.&#10;version 0.0.1">
+      <created>1521813342404</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1521813342404</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212965000" />
+    <option name="totallyTimeSpent" value="213268000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="214" y="0" width="1686" height="1047" extended-state="0" />
+    <frame x="214" y="0" width="1686" height="1047" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
