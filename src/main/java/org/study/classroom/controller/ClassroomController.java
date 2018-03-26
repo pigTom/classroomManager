@@ -110,6 +110,50 @@ public class ClassroomController {
         return Constants.COURSE_PATH;
     }
 
+    @RequestMapping("doOrder.do")
+    public String doOrder(String classroomId, HttpSession session, Model model){
+        if (StringUtils.isEmpty(classroomId) || !Util.isNumeric(classroomId)){
+            return Constants.BASE_USER_PATH+"classroom_user";
+        }
+        Long id = Long.parseLong(classroomId);
+        ClassroomPageInfo classroomPageInfo = (ClassroomPageInfo) session.getAttribute
+                (Constants.CLASSROOM_PAGES);
+        String s;
+        if ((s = SafeCheck.checkSession(session)) != null){
+            return s;
+        }
+
+
+        List<Classroom> classrooms = classroomPageInfo.getData();
+        for (Classroom classroom : classrooms) {
+            if (classroom.getId() == id) {
+                model.addAttribute("classroom", classroom);
+                return Constants.BASE_USER_PATH + "doOrder";
+            }
+        }
+        return  Constants.BASE_USER_PATH+"classroom_user";
+    }
+
+    @RequestMapping("freeClassLook.do")
+    public String freeClassLook(HttpSession session, Model model){
+
+        List<Classroom> classrooms = classroomService.getClassrooms();
+        // userPageIn maybe empty
+        ClassroomPageInfo classroomPageInfo = new ClassroomPageInfo(classrooms);
+        classroomPageInfo.setEvePageNum(Constants.PAGE_NUM);
+        session.setAttribute(Constants.CLASSROOM_PAGES, classroomPageInfo);
+
+
+        if (classroomPageInfo.getTotalPage() == 0) {
+            return Constants.CLASSROOM_PATH;
+        }
+
+        // 得到user PageInfo，在jsp页面里通过studentList.getData()得到一个list。
+        classroomPageInfo.setCurrPage(1);
+        model.addAttribute(Constants.CLASSROOM_PAGES, classroomPageInfo);
+        return Constants.BASE_USER_PATH+"classroom_user";
+    }
+
     @RequestMapping("gotoClassroom.do")
     public String gotoClassroom(HttpServletRequest request, Model model) {
         return noReloadData(request, null, model);

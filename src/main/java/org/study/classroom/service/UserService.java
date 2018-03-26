@@ -10,6 +10,7 @@ import org.study.classroom.utils.*;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 @Service
@@ -17,15 +18,15 @@ import java.util.List;
 public class UserService {
     @Resource
     private ClassroomUserMapper userMapper;
-    public String login(String username, String password) {
+    public String login(String username, String password, HttpSession session) {
 
         // check if any exception happened
-        if (username == null)
+        if (username == null || !Util.isNumeric(username))
             return Constants.USERNAME_ERROR;
         if (password == null)
             return Constants.PASSWORD_ERROR;
-
-        ClassroomUser user = userMapper.selectByName(username);
+        Long userId = Long.parseLong(username);
+        ClassroomUser user = userMapper.selectByUserId(userId);
         // username error
         if (user == null)
             return Constants.ID_ERROR;
@@ -33,6 +34,8 @@ public class UserService {
         if (!user.getPassword().equals(password))
             return Constants.PASSWORD_ERROR;
 
+        // 将用户信息存到session中
+        session.setAttribute("user", user);
         return Constants.LOGIN_OK;
     }
 
@@ -47,7 +50,7 @@ public class UserService {
     }
 
     public void deleteById(Long id){
-        userMapper.selectById(id);
+        userMapper.deleteById(id);
     }
 
     public int deleteAll(String ids) {
@@ -76,11 +79,14 @@ public class UserService {
         return userMapper.updateAllPrivilege(privilege, ids);
     }
 
+    public int update(ClassroomUser user){
+        return userMapper.update(user);
+    }
     private List<ClassroomUser> selectByNameLikeOrId(String name, Title title) {
         // 如果是学号
         if (Util.isNumeric(name)) {
             Long id = Long.parseLong(name);
-            ClassroomUser user = userMapper.selectById(id);
+            ClassroomUser user = userMapper.selectByUserId(id);
             if (user == null) {
                 return null;
             }
@@ -97,5 +103,9 @@ public class UserService {
     }
     public List<ClassroomUser> selectTeacherByNameLikeOrId(String name) {
         return selectByNameLikeOrId(name, Title.teacher);
+    }
+
+    public ClassroomUser selectUserById(Long id){
+        return userMapper.selectById(id);
     }
 }

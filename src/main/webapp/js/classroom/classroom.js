@@ -53,7 +53,7 @@ function freezeAll() {
 }
 
 function update1(id) {
-    loadhtml(rootPath+"classroom/updateClassroom.do?id=" + id);// 加载页面
+    loadhtml("classroom/updateClassroom.do?id=" + id);// 加载页面
 }
 function query() {
     var userId = $("#className").val();
@@ -78,5 +78,5 @@ function intoOrder(id) {
 function loadhtml(url, data) {
     var tb = $("#loadhtml");
     tb.html(CommnUtil.loadingImg());
-    tb.load(url, data);// 加载页面
+    tb.load(rootPath+"/"+url, data);// 加载页面
 }

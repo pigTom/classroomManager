@@ -11,4 +11,8 @@
     <select id="selectById" resultMap="adminMap">
         SELECT * FROM classroom_administrator WHERE id=#{id}
     </select>
+
+    <select id="selectByName" resultMap="adminMap">
+        SELECT * FROM classroom_administrator WHERE admin_name = #{adminName}
+    </select>
 </mapper>

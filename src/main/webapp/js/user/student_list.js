@@ -12,7 +12,7 @@ function selectAll() {
 }
 // 删除用户byId
 function deleteUser(id) {
-    loadhtml("user/deleteStudentById.do","id="+id);
+    loadhtml("admin/deleteStudentById.do","id="+id);
 }
 
 // 删除所有选中的元素
@@ -26,16 +26,16 @@ function deleteAll() {
         }
     });
     alert(ids)
-    loadhtml("user/deleteStudentById.do","id="+ids);
+    loadhtml("admin/deleteStudentById.do","id="+ids);
 }
 
 // 冻结数据需要重新加载数据
 function freeze(id, privilege) {
     if(privilege === 'none'){
 
-        loadhtml("user/unfreezeStudentById.do","id="+id);
+        loadhtml("admin/unfreezeStudentById.do","id="+id);
     }else {
-        loadhtml("user/freezeStudentById.do", "id="+id);
+        loadhtml("admin/freezeStudentById.do", "id="+id);
     }
 }
 function freezeAll() {
@@ -49,15 +49,15 @@ function freezeAll() {
         }
     });
     alert(ids)
-    loadhtml("user/freezeStudentById.do","id="+ids);
+    loadhtml("admin/freezeStudentById.do","id="+ids);
 }
 
 function update1(id) {
-    loadhtml(rootPath+"user/updateStudent.do?id=" + id);// 加载页面
+    loadhtml("admin/updateStudent.do?id=" + id);// 加载页面
 }
 function query() {
     var userId = $("#userId").val();
-    loadhtml("user/queryStudent.do","userId="+userId);// 加载页面
+    loadhtml("admin/queryStudent.do","userId="+userId);// 加载页面
 }
 
 function change1() {
@@ -68,10 +68,10 @@ function change(pagenum, totalPage) {
     if( pagenum <= 0 || pagenum > totalPage ) {
         return;
     }
-    loadhtml("user/changeStudentPage.do", "pageNum="+pagenum)
+    loadhtml("admin/changeStudentPage.do", "pageNum="+pagenum)
 }
 function loadhtml(url, data) {
     var tb = $("#loadhtml");
     tb.html(CommnUtil.loadingImg());
-    tb.load(url, data);// 加载页面
+    tb.load(rootPath+"/"+url, data);// 加载页面
 }

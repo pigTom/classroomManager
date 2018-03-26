@@ -30,7 +30,7 @@ public class TestClassroomUser extends BaseSqlSessionFactory{
         SqlSession sqlSession = getSqlSession();
         try{
             ClassroomUserMapper userMapper = sqlSession.getMapper(ClassroomUserMapper.class);
-            ClassroomUser user = userMapper.selectById(1L);
+            ClassroomUser user = userMapper.selectByUserId(1L);
             Assert.assertNotNull(user);
             System.out.println("user name: " + user.getPassword());
         }finally {

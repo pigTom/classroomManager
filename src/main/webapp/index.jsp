@@ -214,13 +214,13 @@
 											<ul class="nav lt">
 												<li class="active">
 													<a href="javascript:void(0)" class="active"
-													   nav-n="用户管理,学生管理,/user/students.do">
+													   nav-n="用户管理,学生管理,/admin/students.do">
 														<i class="fa fa-angle-right"></i>
 														<span>学生管理</span>
 													</a></li>
 												<li class="active">
 													<a href="javascript:void(0)" class="active"
-													   nav-n="用户管理,教师管理,/user/teachers.do">
+													   nav-n="用户管理,教师管理,/admin/teachers.do">
 														<i class="fa fa-angle-right"></i>
 														<span>教师管理</span>
 													</a></li>

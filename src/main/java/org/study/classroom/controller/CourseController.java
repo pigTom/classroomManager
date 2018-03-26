@@ -28,6 +28,24 @@ public class CourseController {
         return this.getList(request, model, 1,  true);
     }
 
+    @RequestMapping("userLookCourse.do")
+    public String userLookCourse(HttpSession session, Model model){
+
+
+        List<ClassroomLog> classrooms = logsService.selectAllLogs();
+        // userPageIn maybe empty
+        ClassroomLogPageInfo logPageInfo = new ClassroomLogPageInfo(classrooms);
+        logPageInfo.setEvePageNum(Constants.PAGE_NUM);
+        session.setAttribute(Constants.COURSE_PAGES, logPageInfo);
+
+        if (logPageInfo.getTotalPage() == 0) {
+            return Constants.COURSE_PATH;
+        }
+        // 得到user PageInfo，在jsp页面里通过studentList.getData()得到一个list。
+        logPageInfo.setCurrPage(1);
+        model.addAttribute(Constants.COURSE_PAGES, logPageInfo);
+        return Constants.BASE_USER_PATH + "course";
+    }
     @RequestMapping("deleteAllOrdersById.do")
     public String deleteOrdersById(HttpServletRequest request, Model model, String logId){
         if (StringUtils.isEmpty(logId) || Util.isNumericStr(logId)) {

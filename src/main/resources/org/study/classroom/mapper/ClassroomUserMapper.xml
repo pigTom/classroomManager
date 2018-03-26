@@ -7,7 +7,11 @@
         <id javaType="Long" column="id" property="id"/>
         <result property="userId" column="user_id"/>
         <result property="userTitle" column="user_title"/>
+        <result property="userMail" column="user_mail"/>
+        <result property="userTelephone" column="user_telephone"/>
+        <result property="userSex" column="user_sex"/>
         <result property="userName" column="user_name"/>
+        <result property="userQq" column="user_qq"/>
         <result property="password" column="password"/>
         <result property="privilege" column="privilege"/>
         <result property="createTime" column="create_time"/>
@@ -20,7 +24,10 @@
         SELECT * FROM classroom_user WHERE user_title=#{userTilte}
     </select>
     <select id="selectById" resultMap="classUserMap">
-        SELECT * FROM  `classroom_user` WHERE id=#{id}
+        SELECT * FROM classroom_user WHERE id = #{id}
+    </select>
+    <select id="selectByUserId" resultMap="classUserMap">
+        SELECT * FROM  `classroom_user` WHERE user_id=#{id}
     </select>
     <select id="selectByNameLike" resultMap="classUserMap">
         SELECT * FROM classroom_user WHERE user_name like #{param}
@@ -45,6 +52,21 @@
         </if>
         <if test="userName != null">
             , user_name = #{userName}
+        </if>
+        <if test="userMail != null">
+            , user_mail = #{userMail}
+        </if>
+        <if test="userTelephone != null">
+            , user_telephone = #{userTelephone}
+        </if>
+        <if test="userId != null">
+            , user_id = #{userId}
+        </if>
+        <if test="userQq != null">
+            , user_qq = #{userQq}
+        </if>
+        <if test="userSex != null">
+            , user_sex = #{userSex}
         </if>
         <if test="privilege != null">
             , privilege = #{privilege}

@@ -60,6 +60,6 @@
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
     </listener>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>user_login.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

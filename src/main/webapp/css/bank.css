@@ -1,58 +1,28 @@
  @CHARSET "UTF-8";
- #main {
-	width: 1100px;
-	margin: 0px auto;
-	height: 600px;
-}
-
-#left {
-	width: 290px;
-	margin-right: 10px;
-	font-size: 22px;
-	float: left;
-	padding: 10px 25px;
-	height: 600px;
-	box-sizing: border-box;
-	background-color: #F2FAFF;
-}
-#right {
-	width: 800px;
-	float: left;
-	height: 600px;
-	box-sizing: border-box;
-	padding: 0px 0px;
-	background-color: #F2FAFF;
-}
  .menu {
 	padding: 5px 10px;
 	border: 1px solid green;
 	margin: 5px;
-}
-.data1 {
-	float: left;
-	width: 200px;
-	padding: 10px;
-	text-align: center;
-	font-size: 20px;
-	background-color: #F2FAF0;
-	padding: 10px;
-	box-sizing: border-box;
-	border: 1px solid green;
 }
  .data {
 	
 	font-size: 18px;
 	padding: 10px 40px;
 	box-sizing: border-box;
-	border: 1px solid green;
+	 margin-right: 5px;
+	 text-align-all: center;
 }
  .row {
-
-	background-color: #F2FAFF;
-	padding: 10px;
+		text-align: center;
+		background-color: #F2FAFF;
+		padding: 10px;
 
 }
-
+.oneRow{
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 16px;
+}
 .click{
 	padding: 5px 10px;
 	background-color: #F2FAF0;
@@ -66,10 +36,6 @@
 	border: 2px solid green;
 	font-size: 22px;
 	margin: 5px;
-}
-#pageBottom{
-	text-align: center;
-	text-vlign: center;
 }
 #top {
 	font-size: 18px;
@@ -89,34 +55,3 @@
                  
                 display: block;  
             }  
-/*
-<!-- 银行系统顶部 -->
-.bankTop{
-	height: 100px;
-	background-color: #F2FAFF;
-	padding: 40px 10px;
-}
-.bankLogo{
-	display: inline-block;
-	width: 200px;
-	height: 40px;
-	background-image: url("../pic/logo1.png");
-	background-repeat: no-repeat;
-	background-position: center center;
-	vertical-align: middle;
-	margin-left: 20px;
-}
-.left {
-	width: 300px;
-	font-size: 22px;
-	float: left;
-	padding: 10px 25px;
-	height: 600px;
-	box-sizing: border-box;
-	background-color: blue;
-}
-.right {
-	width: 800px;
-	float: left;
-	height: 1000px;
-} */

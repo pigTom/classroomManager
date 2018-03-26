@@ -21,16 +21,19 @@
 </head>
 <body>
 <div id="header"><span class="title">教室用户登录</span></div>
-<form action="user/login.do" method="post" onclick="return loginCheck()">
-    <div class="data"><input type="text" name="userName" id="userName" placeholder="User Name" value="${userName}" ></div>
-    <div class="ErrorData" id="userNameError">${userNameError}</div>
-    <div class="data"><input type="password" name="password" id="password" placeholder="password" value="${password}" }></div>
-    <div class="ErrorData" id="passwordError">${passwordError}</div>
-    <div class="data"><input type="submit" value="登录"></div>
-    <div class="ErrorData" id="loginError">${loginError}</div>
-</form>
-<a href="register.jsp">教室用户注册</a>
-<a href="adminLogin.jsp">教室管理员登录</a>
+<div class="myFrame">
+    <form action="user/login.do" method="post" onclick="return loginCheck()">
+        <div class="data"><input type="text" name="userName" id="userName" placeholder="User Name" value="${userName}" ></div>
+        <div class="ErrorData" id="userNameError">${userNameError}</div>
+        <div class="data"><input type="password" name="password" id="password" placeholder="password" value="${password}" }></div>
+        <div class="ErrorData" id="passwordError">${passwordError}</div>
+        <div class="data"><input type="submit" value="登录"></div>
+        <div class="ErrorData" id="loginError">${loginError}</div>
+    </form>
+    <a href="register.jsp">教室用户注册</a>
+    <a href="adminLogin.jsp">教室管理员登录</a>
+
+</div>
 <script type="text/javascript">
     function loginCheck(){
         if(  $("#userName").val().trim() == ""){

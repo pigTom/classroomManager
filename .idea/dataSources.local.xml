@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="classroom" uuid="2356d0b2-8dd9-4628-be9c-85aaf281b2b0">
-      <database-info product="MySQL" version="5.0.51b-community-nt" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+    <data-source name="classroom [3]" uuid="b81b3559-cd74-4a5c-a457-e6bcee0454ce">
+      <secret-storage>memory</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:classroom</introspection-schemas>
     </data-source>
-    <data-source name="classroom [2]" uuid="8c38345f-5fe1-407d-bf03-454433e1d100">
-      <database-info product="MySQL" version="5.0.51b-community-nt" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.45 ( Revision: 9131eefa398531c7dc98776e8a3fe839e544c5b2 )">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
-      <secret-storage>master_key</secret-storage>
+    <data-source name="classroom" uuid="4e4bfbab-fc84-4abc-a58f-fe2bbb7ba2b5">
+      <secret-storage>memory</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:classroom</introspection-schemas>
     </data-source>
   </component>
 </project>

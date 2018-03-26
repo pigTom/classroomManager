@@ -6,11 +6,6 @@
 	top: 20px
 }
 
-#header>.title {
-	text-size: 20px;
-	color: red
-}
-
 #body {
 	padding: 10px 10px;
 	position: relative;
@@ -34,12 +29,13 @@
 
 .title {
 	padding: 10px 10px;
+	font-size: 18px;
+	text-align: center;
 	color: #000fff
 }
 
 .myFrame {
-	width: 200px;
-	height: 500px;
+	width: 400px;
 	text-align: center;
 	margin: 100px auto;
 }
@@ -51,14 +47,10 @@
 	color: #0dff03;
 }
 
-.ErrorData {
-	color: red;
-	padding-left: 10px;
-}
 
 input {
 	padding: 5px 5px;
-	font-size: 12px;
+	font-size: 16px;
 }
 
 .copyright {
@@ -69,12 +61,15 @@ input {
 	text-align: right;
 }
 
-.date {
+.td1{
 	text-align: center;
+	padding: 5px;
+	font-size: 16px;
 }
 
-.td1 {
-	text-align: center;
+
+.ErrorData{
+	color: red;
 	padding: 5px;
 	font-size: 16px;
 }

@@ -12,7 +12,7 @@ function selectAll() {
 }
 // 删除用户byId
 function deleteUser(id) {
-    loadhtml("user/deleteTeacherById.do","id="+id);
+    loadhtml("/admin/deleteTeacherById.do","id="+id);
 }
 
 // 删除所有选中的元素
@@ -25,7 +25,7 @@ function deleteAll() {
             ids += $(box).prop("title")+",";
         }
     });
-    loadhtml("user/deleteTeacherById.do","id="+ids);
+    loadhtml("/admin/deleteTeacherById.do","id="+ids);
 }
 
 // 冻结数据需要重新加载数据
@@ -33,9 +33,9 @@ function freeze(id, privilege) {
     alert("freeze or unfreeze id= " + id);
     if(privilege === 'none'){
 
-        loadhtml("user/unfreezeTeacherById.do","id="+id);
+        loadhtml("/admin/unfreezeTeacherById.do","id="+id);
     }else {
-        loadhtml("user/freezeTeacherById.do", "id="+id);
+        loadhtml("/admin/freezeTeacherById.do", "id="+id);
     }
 }
 function freezeAll() {
@@ -48,15 +48,15 @@ function freezeAll() {
             ids += $(box).prop("title")+",";
         }
     });
-    loadhtml("user/freezeTeacherById.do","id="+ids);
+    loadhtml("/admin/freezeTeacherById.do","id="+ids);
 }
 
 function update1(id) {
-    loadhtml(rootPath+"user/updateTeacher.do?id=" + id);// 加载页面
+    loadhtml("/admin/updateTeacher.do?id=" + id);// 加载页面
 }
 function query() {
     var userId = $("#userId").val();
-    loadhtml("user/queryTeacher.do","userId="+userId);// 加载页面
+    loadhtml("/admin/queryTeacher.do","userId="+userId);// 加载页面
 }
 
 function change1() {
@@ -67,10 +67,10 @@ function change(pagenum, totalPage) {
     if( pagenum <= 0 || pagenum > totalPage) {
         return;
     }
-    loadhtml("user/changeTeacherPage.do", "pageNum="+pagenum)
+    loadhtml("/admin/changeTeacherPage.do", "pageNum="+pagenum)
 }
 function loadhtml(url, data) {
     var tb = $("#loadhtml");
     tb.html(CommnUtil.loadingImg());
-    tb.load(url, data);// 加载页面
+    tb.load(rootPath+url, data);// 加载页面
 }

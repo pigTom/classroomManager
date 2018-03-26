@@ -1,6 +1,7 @@
 package org.study.classroom.model;
 
 import org.study.classroom.utils.Privilege;
+import org.study.classroom.utils.Sex;
 import org.study.classroom.utils.Title;
 
 import java.util.Date;
@@ -10,7 +11,11 @@ public class ClassroomUser {
     private Long id;
     private String userId;
     private Title userTitle;
+    private String userMail;
+    private String userTelephone;
+    private String userQq;
     private String userName;
+    private Sex userSex;
     private String password;
     private Date createTime;
     private Date updateTime;
@@ -23,6 +28,38 @@ public class ClassroomUser {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Sex getUserSex() {
+        return userSex;
+    }
+
+    public void setUserSex(Sex userSex) {
+        this.userSex = userSex;
+    }
+
+    public String getUserMail() {
+        return userMail;
+    }
+
+    public void setUserMail(String userMail) {
+        this.userMail = userMail;
+    }
+
+    public String getUserTelephone() {
+        return userTelephone;
+    }
+
+    public void setUserTelephone(String userTelephone) {
+        this.userTelephone = userTelephone;
+    }
+
+    public String getUserQq() {
+        return userQq;
+    }
+
+    public void setUserQq(String userQq) {
+        this.userQq = userQq;
     }
 
     public String getUserId() {
