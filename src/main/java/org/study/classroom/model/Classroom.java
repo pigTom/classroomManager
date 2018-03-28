@@ -3,7 +3,7 @@ package org.study.classroom.model;
 import org.study.classroom.utils.Available;
 
 
-public class Classroom {
+public class Classroom extends BaseBean{
     private Long id;
     private String buildingName;
     private String classroomName;

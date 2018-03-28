@@ -1,6 +1,6 @@
 package org.study.classroom.model;
 
-public class ClassroomAdministrator {
+public class ClassroomAdministrator extends BaseBean{
     private Long id;
     private String adminName;
     private String password;

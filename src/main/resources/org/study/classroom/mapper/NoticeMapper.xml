@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.study.classroom.mapper.NoticeMapper">
+    <resultMap id="noticeMap" type="org.study.classroom.model.Notice">
+        <id column="id" property="id" />
+        <result column="publisher_id" property="publisherId"/>
+        <result column="publisher_name" property="publisherName"/>
+        <result column="subject" property="subject"/>
+        <result column="content" property="content"/>
+        <result column="create_time" property="createTime"/>
+    </resultMap>
+
+    <sql id="noticeSql">
+        SELECT id, subject, content, create_time, publisher_id, (SELECT admin_name from classroom_administrator admin
+        where admin.id = noti.publisher_id) as publisher_name from notice noti
+    </sql>
+
+    <select id="getNoticesByPublisherId" resultMap="noticeMap">
+         <include refid="noticeSql"/> WHERE noti.publisher_id = #{param}
+    </select>
+
+    <select id="getNotices" resultMap="noticeMap">
+        <include refid="noticeSql"/>
+    </select>
+
+    <insert id="addNotice" parameterType="org.study.classroom.model.Notice">
+        INSERT INTO notice(subject, content, create_time, publisher_id) VALUES (
+                #{subject}, #{content}, now(), #{publisherId}
+        )
+    </insert>
+</mapper>

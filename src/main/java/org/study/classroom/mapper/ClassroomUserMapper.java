@@ -6,7 +6,9 @@ import org.study.classroom.utils.Privilege;
 import org.study.classroom.utils.Title;
 
 import javax.management.loading.PrivateClassLoader;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public interface ClassroomUserMapper{
     /**
@@ -35,6 +37,7 @@ public interface ClassroomUserMapper{
      */
     ClassroomUser selectByUserId(Long id);
 
+    List<ClassroomUser> selectByUserIdLike(String id);
     /**
      * query classroom users by user name,
      * result will be none or one element.
@@ -58,7 +61,7 @@ public interface ClassroomUserMapper{
 
     int deleteById(Long id);
 
-    int deleteAllById(String ids);
+    int deleteAllById(HashMap<String, Object> map);
 
-    int updateAllPrivilege(Privilege privilege, String ids);
+    int updateAllPrivilege(HashMap<String, Object> map);
 }

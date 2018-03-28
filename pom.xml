@@ -140,7 +140,7 @@
   </dependencies>
 
   <build>
-    <finalName>mavenTest</finalName>
+    <finalName>classroomManager</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>

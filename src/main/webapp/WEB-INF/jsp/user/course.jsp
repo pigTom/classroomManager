@@ -2,13 +2,14 @@
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/classroom/classroomCourse.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/user/course.js"></script>
 <div class="m-b-md">
     <form class="form-inline" role="form" id="searchForm"
           name="searchForm">
         <div class="form-group">
             <label class="control-label"> <span
-                    class="h4 font-thin v-middle">&ensp;&ensp;教室:</span></label> <input
+                    class="h4 font-thin v-middle">&ensp;&ensp;教室号:</span></label> <input
+                placeholder="请输入教室号"
                 class="input-medium ui-autocomplete-input" id="className"
                 name="userFormMap.accountName" title="log" >
         </div>
@@ -17,6 +18,7 @@
 </div>
 <header class="panel-heading">
     <div class="doc-buttons">
+        <button type="button" onclick="return1()">返回</button>
     </div>
 </header>
 <div class="table-responsive">
@@ -31,8 +33,8 @@
             <td class="td1">教室号</td>
         </tr>
 
-        <c:if test="${course_pages != null}">
-            <c:forEach items="${course_pages.data}" var="course" varStatus="status">
+        <c:if test="${user_course_pages != null}">
+            <c:forEach items="${user_course_pages.data}" var="course" varStatus="status">
 
                 <tr class="data">
                     <td><input type="checkbox" title="${course.id}"></td>
@@ -64,17 +66,17 @@
         </c:if>
     </table>
 
-    <a href="javascript:void(0)" onclick="change(${course_pages.currPage}-1, ${course_pages.totalPage})">上一页</a>
+    <a href="javascript:void(0)" onclick="change(${user_course_pages.currPage}-1, ${user_course_pages.totalPage})">上一页</a>
     跳转到第<input type="text" title="babab" maxlength="2" size="2" id="pagenum">页
     <input type="button" value="跳转" onclick="change1()">
-    <a href="javascript:void(0)" onclick="change(${course_pages.currPage}+1, ${course_pages.totalPage})">下一页</a>
+    <a href="javascript:void(0)" onclick="change(${user_course_pages.currPage}+1, ${user_course_pages.totalPage})">下一页</a>
     <span>共
     <c:choose>
-    <c:when test="${course_pages == null || course_pages == ''}">0</c:when>
-    <c:otherwise>${course_pages.totalPage}</c:otherwise>
+    <c:when test="${user_course_pages == null || user_course_pages == ''}">0</c:when>
+    <c:otherwise>${user_course_pages.totalPage}</c:otherwise>
     </c:choose>页
     </span>
-    <span style="align-content: center">&ensp;&ensp;&ensp;当前第${course_pages.currPage}页</span>
+    <span style="align-content: center">&ensp;&ensp;&ensp;当前第${user_course_pages.currPage}页</span>
 </div>
 
 <div id="callback_div" class="table-responsive" style="display: none;">

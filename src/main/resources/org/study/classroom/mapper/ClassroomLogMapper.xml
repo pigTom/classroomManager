@@ -15,7 +15,7 @@
         <result column="create_time" property="createTime"/>
     </resultMap>
     <sql id="logSql">
-        SELECT id , log.classroom_id classroom_id, (SELECT classroom_name FROM classroom c WHERE
+        SELECT log.id , log.classroom_id classroom_id, (SELECT classroom_name FROM classroom c WHERE
         c.id = log.classroom_id) as classroom_name, log.user_id user_id, (SELECT user_name FROM classroom_user u
         WHERE u.id = log.user_id) as user_name, log.log_name as log_name, log.log_date as log_date,
         log.log_time as log_time, log.create_time as create_time FROM classroom_log log
@@ -30,6 +30,19 @@
         <include refid="logSql"/> where log.classroom_id = #{id}
     </select>
 
+    <select id="findLogsByClassroomName" parameterType="java.lang.String" resultMap="logMap">
+        <include refid="logSql"/>  join classroom class on log.classroom_id =
+        class.id and class.classroom_name = #{classroomName} where to_days(log.log_date) >=
+        to_days(now())
+    </select>
+
+    <select id="findLogsByUserId" resultMap="logMap">
+        <include refid="logSql"/> where log.user_id = #{id}
+    </select>
+    <select id="selectLogsByIdAndDate" resultMap="logMap">
+        SELECT log_time from classroom.classroom_log WHERE classroom_id = #{param1, jdbcType=INTEGER} AND
+            to_days(log_date) = to_days(#{param2, jdbcType=DATE})
+    </select>
     <delete id="deleteLogById">
         DELETE FROM classroom_log WHERE id = #{id}
     </delete>
@@ -37,4 +50,9 @@
     <delete id="deleteAllLogsById" parameterType="java.lang.Long">
         DELETE FROM classroom_log WHERE id in( #{param})
     </delete>
+
+    <insert id="addLog" parameterType="org.study.classroom.model.ClassroomLog">
+        insert into classroom.classroom_log(classroom_id, user_id, log_name, log_date, log_time, create_time )
+                VALUES ( #{param1}, #{param2}, #{param3}, #{param4, jdbcType=DATE}, #{param5}, now() )
+    </insert>
 </mapper>

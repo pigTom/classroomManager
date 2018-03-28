@@ -2,14 +2,16 @@
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<script type="text/javascript" src="${pageContext.request.contextPath}/js/classroom/classroomCourse.js"></script>
+
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/admin/course.js"></script>
 <div class="m-b-md">
     <form class="form-inline" role="form" id="searchForm"
           name="searchForm">
         <div class="form-group">
             <label class="control-label"> <span
-                    class="h4 font-thin v-middle">&ensp;&ensp;教室:</span></label> <input
+                    class="h4 font-thin v-middle">&ensp;&ensp;教室号:</span></label> <input
                 class="input-medium ui-autocomplete-input" id="className"
+                placeholder="请输入教室号"
                 name="userFormMap.accountName" title="log" >
         </div>
         <a href="javascript:void(0)" class="btn btn-default" id="search" onclick="query()">查询</a>

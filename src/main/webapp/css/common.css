@@ -35,7 +35,7 @@
 }
 
 .myFrame {
-	width: 400px;
+	width: 800px;
 	text-align: center;
 	margin: 100px auto;
 }
@@ -60,14 +60,21 @@ input {
 .author {
 	text-align: right;
 }
-
 .td1{
 	text-align: center;
 	padding: 5px;
 	font-size: 16px;
 }
+.td2{
+	margin-top: 10px;
+	padding: 5px;
+	font-size: 16px;
+}
 
-
+.label{
+	width: 100px;
+	text-align: left;
+}
 .ErrorData{
 	color: red;
 	padding: 5px;

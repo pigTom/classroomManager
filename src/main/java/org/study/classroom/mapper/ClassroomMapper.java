@@ -15,6 +15,6 @@ public interface ClassroomMapper {
 
     int deleteClassroomById(Long id);
 
-    int deleteAllClassroomById(String id);
+    int deleteAllClassroomsById(String id);
 
 }

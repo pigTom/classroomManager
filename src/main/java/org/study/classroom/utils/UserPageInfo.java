@@ -5,7 +5,7 @@ import org.study.classroom.model.ClassroomUser;
 import java.util.Iterator;
 import java.util.List;
 
-public class UserPageInfo extends AbstractPageInfo<ClassroomUser>{
+public class UserPageInfo extends BasePageInfo<ClassroomUser>{
 	public UserPageInfo(List<ClassroomUser> users) {
 		super(users);
 	}
@@ -46,7 +46,6 @@ public class UserPageInfo extends AbstractPageInfo<ClassroomUser>{
 	 * @param user1
 	 * @param user2
 	 */
-	@Override
 	protected void update(ClassroomUser user1, ClassroomUser user2) {
 		if (user1 == null || user2 == null || user1.getId() != user2.getId()) {
 			return;

@@ -10,6 +10,8 @@ import org.study.classroom.utils.Constants;
 import org.study.classroom.utils.Privilege;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
+
 @Transactional
 public class AdminService {
     @Inject
@@ -17,7 +19,7 @@ public class AdminService {
     @Inject
     private ClassroomUserMapper userMapper;
 
-    public String login(String name, String password) {
+    public String login(HttpSession session, String name, String password) {
 
         // check if any exception happened
         if (name == null)
@@ -32,7 +34,7 @@ public class AdminService {
         if (!administrator.getPassword().equals(password))
             return Constants.PASSWORD_ERROR;
 
-
+        session.setAttribute("user", administrator);
         return Constants.LOGIN_OK;
     }
 

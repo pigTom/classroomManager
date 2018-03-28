@@ -33,7 +33,7 @@ public class ClassroomService {
 
     public int deleteAllById(String id) {
         if (Util.isNumericStr(id)) {
-            return classroomMapper.deleteAllClassroomById(id);
+            return classroomMapper.deleteAllClassroomsById(id);
         }
         // do nothing
         return 0;

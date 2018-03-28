@@ -29,6 +29,11 @@
     <select id="selectByUserId" resultMap="classUserMap">
         SELECT * FROM  `classroom_user` WHERE user_id=#{id}
     </select>
+
+    <select id="selectByUserIdLike" resultMap="classUserMap" parameterType="java.lang.String">
+        SELECT * FROM  `classroom_user` WHERE user_id LIKE #{id, jdbcType=VARCHAR}
+    </select>
+
     <select id="selectByNameLike" resultMap="classUserMap">
         SELECT * FROM classroom_user WHERE user_name like #{param}
     </select>
@@ -39,9 +44,9 @@
     <insert id="insert" parameterType="org.study.classroom.model.ClassroomUser"
     useGeneratedKeys="true" keyProperty="id">
         INSERT INTO classroom_user(user_id, user_name,
-        password, privilege)
+        password, privilege, user_title)
         VALUES (
-        #{userId},  #{userName}, #{password}, #{privilege}
+        #{userId},  #{userName}, #{password}, #{privilege}, #{userTitle}
         )
     </insert>
 
@@ -74,8 +79,11 @@
         where id = #{id}
     </update>
 
-    <update id="updateAllPrivilege">
-        UPDATE classroom_user SET privilege = #{param1} WHERE id IN (#{param2})
+    <update id="updateAllPrivilege" parameterType="map">
+        UPDATE classroom_user SET privilege = #{privilege, jdbcType=VARCHAR} WHERE id IN
+        <foreach item="id" collection="ids"  open="(" close=")" separator=",">
+            #{id}
+        </foreach>
     </update>
 
     <delete id="deleteByName" parameterType="java.lang.String">
@@ -86,8 +94,12 @@
         DELETE from `classroom_user` where id = #{id}
     </delete>
 
-    <delete id="deleteAllById" parameterType="java.lang.String">
-        DELETE FROM classroom_user WHERE id IN (#{param})
+    <delete id="deleteAllById" parameterType="map">
+        DELETE FROM classroom_user WHERE id IN
+        <foreach collection="idi" item="id"
+                 index="index" open="(" close=")" separator=",">
+                #{id, jdbcType=INTEGER}
+        </foreach>
     </delete>
 
 </mapper>

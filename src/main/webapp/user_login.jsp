@@ -30,8 +30,15 @@
         <div class="data"><input type="submit" value="登录"></div>
         <div class="ErrorData" id="loginError">${loginError}</div>
     </form>
-    <a href="register.jsp">教室用户注册</a>
-    <a href="adminLogin.jsp">教室管理员登录</a>
+
+    <div class="td1">
+        <a href="register.jsp">教室用户注册</a>
+    </div>
+    <div class="td1">
+
+        <a href="admin_login.jsp">教室管理员登录</a>
+    </div>
+
 
 </div>
 <script type="text/javascript">

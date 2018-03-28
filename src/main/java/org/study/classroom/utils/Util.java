@@ -17,6 +17,9 @@ public class Util {
     }
 
     public static boolean isNumericStr(String str){
+        if (str == null) {
+            return false;
+        }
         if(str.endsWith(",")){
             str = str.substring(0, str.length()-1);
         }
@@ -25,6 +28,8 @@ public class Util {
     }
 
     public static String getName(String str){
+        if (str == null )
+            return  null;
         String[] strings = str.split("(\\d)*+");
         System.out.println(Arrays.toString(strings));
         if (strings.length == 0) {
@@ -42,6 +47,9 @@ public class Util {
     }
 
     public static String getNumber(String string) {
+        if (string == null) {
+            return null;
+        }
         String[] strings = string.split("([^\\d])*+");
         System.out.println(Arrays.toString(strings));
         if (strings.length == 0) {

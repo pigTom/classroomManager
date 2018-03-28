@@ -150,7 +150,7 @@
 						</a></li>
 						<li><a href="docs.html">Help</a></li>
 						<li class="divider"></li>
-						<li><a href="user_login.jsp">Logout</a></li>
+						<li><a href="user/logout.do">Logout</a></li>
 					</ul></li>
 			</ul>
 		</header>
@@ -215,13 +215,13 @@
 												<!-- 每一个<li>包含一列,<span>里的值是这一列的text -->
 												<li>
 													<a href="javascript:void(0)"
-													   nav-n="教室管理,空闲教室查看,/classroom/freeClassLook.do">
+													   nav-n="教室管理,空闲教室查看,/user/classroom/freeClassLook.do">
 														<i class="fa fa-angle-right"></i>
 														<span>空闲教室查看</span>
 													</a></li>
 												<li>
 													<a href="javascript:void(0)"
-													   nav-n="教室管理,教室排课查看,/classroom/userLookCourse.do">
+													   nav-n="教室管理,教室排课查看,/user/course/course.do">
 														<i class="fa fa-angle-right"></i>
 														<span>教室排课查看</span>
 													</a></li>
@@ -238,7 +238,7 @@
 												<!-- 每一个<li>包含一列,<span>里的值是这一列的text -->
 												<li class="active">
 													<a href="javascript:void(0)"
-													   nav-n="活动管理,查看活动,/welcome.jsp">
+													   nav-n="活动管理,查看活动,/user/activity/activity.do">
 														<i class="fa fa-angle-right"></i>
 														<span>查看活动</span>
 													</a></li>
@@ -255,16 +255,16 @@
 												<!-- 每一个<li>包含一列,<span>里的值是这一列的text -->
 												<li class="active">
 													<a href="javascript:void(0)"
-													   nav-n="公告,查看公告,/welcome.jsp">
+													   nav-n="公告,查看公告,/user/notice/notice.do">
 														<i class="fa fa-angle-right"></i>
 														<span>查看公告</span>
 													</a></li>
-												<li class="active">
-													<a href="javascript:void(0)"
-													   nav-n="公告,发布公告,/welcome.jsp">
-														<i class="fa fa-angle-right"></i>
-														<span>发布公告</span>
-													</a></li>
+												<%--<li class="active">--%>
+													<%--<a href="javascript:void(0)"--%>
+													   <%--nav-n="公告,发布公告,/welcome.jsp">--%>
+														<%--<i class="fa fa-angle-right"></i>--%>
+														<%--<span>发布公告</span>--%>
+													<%--</a></li>--%>
 											</ul></li>
 
 										<!--  二级菜单  -->

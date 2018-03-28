@@ -10,7 +10,7 @@ CREATE TABLE `classroom` (
 	COMMENT '教室座位数',
 	available SET ('yes', 'no') not NULL DEFAULT 'yes',
 	primary key(id)
-);
+)DEFAULT CHARSET=utf8;
 alter table classroom comment '教室表';
 insert into classroom(classroom_name, building_name, classroom_seats)
 values('1101', '一号教学楼', '100');
@@ -24,6 +24,32 @@ insert into classroom(classroom_name, building_name, classroom_seats)
 values('1105', '一号教学楼', '150');
 insert into classroom(classroom_name, building_name, classroom_seats)
 values('1106', '一号教学楼', '150');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('2101', '二号教学楼', '80');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('2102', '二号教学楼', '80');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('2103', '二号教学楼', '90');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('2104', '二号教学楼', '90');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('2105', '二号教学楼', '90');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('2106', '二号教学楼', '90');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('3101', '三号教学楼', '200');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('3102', '三号教学楼', '200');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('3103', '三号教学楼', '200');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('3104', '三号教学楼', '200');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('3201', '三号教学楼', '200');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('3202', '三号教学楼', '150');
+insert into classroom(classroom_name, building_name, classroom_seats)
+values('3203', '三号教学楼', '150');
 
 DROP TABLE IF EXISTS classroom_administrator;
 create table classroom_administrator(
@@ -32,7 +58,7 @@ create table classroom_administrator(
 	password varchar(30) not null comment '教室管理员密码',
 	create_time TIMESTAMP NULL DEFAULT now() comment '教室管理员创建日期和时间',
 	primary key(id)
-);
+)DEFAULT CHARSET=utf8;
 alter table classroom_administrator comment '教室管理员表';
 insert into classroom_administrator(admin_name, password) values('admin','admin');
 insert into classroom_administrator(admin_name, password) values('tang', 'tang');
@@ -54,19 +80,29 @@ create table classroom_user(
 	user_sex set('male', 'female') not NULL DEFAULT 'male',
   user_qq int(10) COMMENT 'QQ账号',
 	primary key(id)
-);
+)DEFAULT CHARSET=utf8;
 alter table classroom_user comment '教室用户表';
 
 insert into classroom_user(user_id, user_name, user_title,user_mail, user_telephone,
                             user_qq, user_sex, password, privilege)
 VALUES (3110020310, '张大妈', 'teacher','264875853@qq.com','15826501155',1264875852,'female',
         'zhangdama', 'senior');
+
 insert into classroom_user(user_id, user_name, user_title,user_mail, user_telephone,
                            user_qq, user_sex, password, privilege)
 VALUES (3110020311, '王大海', 'student','264875853@qq.com','15826501155',1264875852,'female', 'wangdahai', 'normal');
 insert into classroom_user(user_id, user_name, user_title,user_mail, user_telephone,
                            user_qq, user_sex, password, privilege)
 VALUES (3110020312, '张大仙', 'student', '264875853@qq.com','15826501155',1264875852,'female','zhangdaxian', 'normal');
+insert into classroom_user(user_id, user_name, user_title,user_mail, user_telephone,
+													 user_qq, user_sex, password, privilege)
+VALUES (3110020314, '张二仙', 'student', '264875853@qq.com','15826501155',1264875852,'female','zhangdaxian', 'normal');
+insert into classroom_user(user_id, user_name, user_title,user_mail, user_telephone,
+user_qq, user_sex, password, privilege)
+VALUES (3110020315, '张三仙', 'student', '264875853@qq.com','15826501155',1264875852,'female','zhangdaxian', 'normal');
+insert into classroom_user(user_id, user_name, user_title,user_mail, user_telephone,
+user_qq, user_sex, password, privilege)
+VALUES (3110020316, '张小仙', 'student', '264875853@qq.com','15826501155',1264875852,'female','zhangdaxian', 'normal');
 insert into classroom_user(user_id, user_name, user_title,user_mail, user_telephone,
                            user_qq, user_sex, password, privilege)
 VALUES (3110020313, '王大海', 'student','264875853@qq.com','15826501155',1264875852,'male', 'wangdahai', 'normal');
@@ -167,7 +203,7 @@ create table classroom_log(
 	COMMENT '占用具体时间，数字表示第几节课',
 	create_time TIMESTAMP NULL DEFAULT now() comment '日志创建日期和时间',
 	primary key(id)
-);
+)DEFAULT CHARSET=utf8;
 alter table classroom_log comment '借用教室日志表';
 
 INSERT INTO  classroom_log(classroom_id, user_id, log_name, log_date, log_time) VALUES
@@ -183,4 +219,12 @@ INSERT INTO  classroom_log(classroom_id, user_id, log_name, log_date, log_time) 
 INSERT INTO  classroom_log(classroom_id, user_id, log_name, log_date, log_time) VALUES
 	(2, 1, 'Java程序设计', '2018-04-19', '1');
 
+DROP TABLE IF EXISTS notice;
+create table notice(
+	id bigint unsigned auto_increment comment '公告Id' PRIMARY KEY ,
+	subject varchar(40) not NULL COMMENT '标题',
+	content TEXT COMMENT '公告具体内容',
+	create_time TIMESTAMP DEFAULT now() COMMENT '公告创建时间',
+	publisher_id BIGINT unsigned NOT NULL COMMENT '发布人Id'
+)DEFAULT CHARSET=utf8
 

@@ -2,7 +2,7 @@ package org.study.classroom.model;
 
 import java.util.Date;
 
-public class ClassroomLog {
+public class ClassroomLog extends BaseBean{
     private Long id;
     private Long classroomId;
     private String classroomName;

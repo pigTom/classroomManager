@@ -65,4 +65,9 @@
                   value="org.study.classroom.mapper.ClassroomLogMapper"/>
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
+    <bean id="noticeMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+        <property name="mapperInterface"
+                  value="org.study.classroom.mapper.NoticeMapper"/>
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
 </beans>

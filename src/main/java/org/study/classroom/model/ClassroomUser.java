@@ -7,9 +7,9 @@ import org.study.classroom.utils.Title;
 import java.util.Date;
 import java.util.List;
 
-public class ClassroomUser {
+public class ClassroomUser extends BaseBean{
     private Long id;
-    private String userId;
+    private Long userId;
     private Title userTitle;
     private String userMail;
     private String userTelephone;
@@ -62,11 +62,11 @@ public class ClassroomUser {
         this.userQq = userQq;
     }
 
-    public String getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

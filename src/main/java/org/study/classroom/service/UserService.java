@@ -12,7 +12,10 @@ import javax.annotation.Resource;
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 @Service
 @Transactional
 public class UserService {
@@ -39,8 +42,18 @@ public class UserService {
         return Constants.LOGIN_OK;
     }
 
-    public void addUser(ClassroomUser user) {
+    public boolean addUser(ClassroomUser user) {
+        ClassroomUser user1 = userMapper.selectByUserId(user.getUserId());
+        if (user1 != null) {
+            return false;
+        }
+        if (user.getUserTitle().toString().equals("teacher")) {
+            user.setPrivilege(Privilege.senior);
+        }else{
+            user.setPrivilege(Privilege.normal);
+        }
         userMapper.insert(user);
+        return true;
     }
 
     public List<ClassroomUser> selectByTitle(Title title){
@@ -54,29 +67,28 @@ public class UserService {
     }
 
     public int deleteAll(String ids) {
-       return userMapper.deleteAllById(ids);
+        String[] id = ids.split(",");
+        Integer[] idi = new Integer[id.length];
+        for (int i = 0; i<idi.length; i++) {
+            idi[i] = Integer.parseInt(id[i]);
+        }
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("idi", idi);
+       return userMapper.deleteAllById(map);
     }
 
-//    public int freezeById(Long id) {
-//        ClassroomUser user = new ClassroomUser();
-//        user.setId(id);
-//        user.setPrivilege(Privilege.none);
-//        return userMapper.update(user);
-//    }
-
-//    public int freezeAllById(String ids) {
-//        if (ids.endsWith(",")) {
-//            ids = ids.substring(0, ids.length() - 1);
-//        }
-//        return userMapper.updateAllPrivilege(Privilege.none, ids);
-//    }
 
     public int updateAllById(String ids, Privilege privilege) {
-        if (ids.endsWith(",")) {
-            ids = ids.substring(0, ids.length() - 1);
+        String[] idstr = ids.split(",");
+        Integer[] idi = new Integer[idstr.length];
+        for (int i = 0; i<idi.length; i++) {
+            idi[i] = Integer.parseInt(idstr[i]);
         }
-        System.out.println("service: id"+ids);
-        return userMapper.updateAllPrivilege(privilege, ids);
+        System.out.println("service: id "+ids);
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("ids", idi);
+        map.put("privilege", privilege);
+        return userMapper.updateAllPrivilege(map);
     }
 
     public int update(ClassroomUser user){
@@ -85,14 +97,13 @@ public class UserService {
     private List<ClassroomUser> selectByNameLikeOrId(String name, Title title) {
         // 如果是学号
         if (Util.isNumeric(name)) {
-            Long id = Long.parseLong(name);
-            ClassroomUser user = userMapper.selectByUserId(id);
+//            Long id = Long.parseLong(name);
+            name = "%" + name + "%";
+            List<ClassroomUser> user = userMapper.selectByUserIdLike(name);
             if (user == null) {
                 return null;
             }
-            List<ClassroomUser> userList = new ArrayList<>();
-            userList.add(user);
-            return userList;
+            return user;
         }
         // 输入的是姓名
         return userMapper.selectByNameLike("%" + name + "%");
